@@ -4,7 +4,7 @@ services:
    db:
      image: mysql:5.7
      volumes:
-       - db_data:/var/lib/mysql
+       - ./database/:/var/lib/mysql
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: dGTAg697ryvb4hB
@@ -17,7 +17,8 @@ services:
        - db
      image: wordpress:latest     
      ports:
-       - "8000:80"
+       - "80:80"
+       - "443:443"
      restart: always
      environment:
        WORDPRESS_DB_HOST: db:3306
