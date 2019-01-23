@@ -29,5 +29,3 @@ services:
       #  - ./wp-content/themes/shopkeeper:/var/www/html/wp-content/themes/shopkeeper # mapping our custom theme to the container
       #  - ./wp-content/plugins:/var/www/html/wp-content/plugins # map our plugins to the container
       #  - ./wp-content/uploads:/var/www/html/wp-content/uploads # map our uploads to the container     
-volumes:
-    db_data: {}
